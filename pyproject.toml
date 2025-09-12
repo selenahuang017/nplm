@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nplm"
+version = "0.1.0"
+description = "Neural Probabilistic Language Model assignment scaffold"
+authors = [
+  { name="Your Name", email="you@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2,<2.3",         # tested stable with NumPy 1.x
+  "transformers>=4.40,<4.45", # current stable
+  "datasets>=2.19,<3.0",     # stable Hugging Face Datasets
+  "numpy<2",                 # critical: avoid NumPy 2.x until PyTorch is rebuilt
+  "tqdm>=4.65",
+  "nltk>=3.8",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
