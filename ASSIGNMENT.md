@@ -18,8 +18,8 @@ That being said, a couple of caveats are in order. Firstly, you're here to learn
 
 1. **Clone this starter repo (the instructor’s copy):**
    ```bash
-   git clone <URL-of-instructor-repo> nplm-assignment
-   cd nplm-assignment
+   git clone <URL-of-instructor-repo>
+   cd nplm
    ```
 
 2. **Remove the link to the instructor’s remote** (so you don’t accidentally push there):
