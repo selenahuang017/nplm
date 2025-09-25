@@ -1,0 +1,5 @@
+how you used LLMs, with prompts, what you changed/verified, and one concrete issue you caught -- more on this towards the end of this document.
+
+With much of the preprocessing, most of the LLM usage was fairly simple, just querying for syntax, such as how to save the nltk.corpus information, or how to pass in correct parameters for argument parsing, or how to save data as a jsonl. Some prompts I used include "can you download the nltk brown corpus into a directory" and "if argparse parameter is not a specific string return error". 
+
+I did find that with simple questions, if the topics were diverse enough; ie I used the same chat log to ask everything from creating a python virtual environment to downloading and parsing information, suggestions at the end of each response always included something that tied back to previous questions, even if I moved on. A lot of suggestions for next steps offered were  completely not on track with what I wanted to do.

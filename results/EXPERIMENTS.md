@@ -1,0 +1,1 @@
+(≤3/4 page: dataset, preprocessing choices, model sizes tried, what helped/hurt).
