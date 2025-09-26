@@ -1,6 +1,7 @@
 # Project-specific directories with large files:
 data/
 runs/
+artifacts/
 
 # Temporary files
 *~
@@ -84,6 +85,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.ipynb
 
 # IPython
 profile_default/

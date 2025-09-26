@@ -37,9 +37,14 @@ def download_brown(output_dir):
         print("Brown corpus already downloaded into", output_dir)
 
 def download_wiki(output_dir):
-    # TODO: implement
-    print("Not implemented yet")
-    pass
+    if not os.listdir(output_dir):
+        from datasets import load_dataset
+        import nltk
+        dataset = load_dataset("wikitext", "wikitext-2-raw-v1")
+        dataset.save_to_disk(output_dir)
+    else:
+        print("Wikitext corpus already downloaded into", output_dir)
+
 
 def main():
     args = parse_args()

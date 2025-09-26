@@ -1,3 +1,8 @@
 {
-    "metrics": "final validation & test perplexity, training time, vocab size, tokenizer type"
+  "train_ppl": 118.7657526221149,
+  "test_ppl": 197.37752042445973,
+  "tokenizer": "artifacts/brown_word_vocab.json",
+  "vocab_size_or_merges": 7004,
+  "context_size": 5,
+  "train_time_sec": 1871.4038729667664
 }

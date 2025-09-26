@@ -71,7 +71,6 @@ def download_brown(input_dir):
     return [" ".join(sent) for sent in brown.sents()]
 
 def download_wiki(input_dir):
-    # TODO: implement!!
     pass
 
 def save_dataset(output_dir, dataset, dset_name, shard_size):

@@ -1,0 +1,17 @@
+seed: 1337
+tokenizer_type: "word"
+tokenizer_path: "artifacts/brown_word_vocab.json"
+context_size: 3
+vocab_size: 5000        # help u can't use it i only use what is in the word 
+embedding_dim: 64
+hidden_dim: 128
+dropout: 0.1 # ignored, not in original paper
+optimizer: "adam"     # default "adam", or else can use "SGD"
+lr: 0.001
+batch_size: 128
+max_steps: 1000
+eval_every: 200
+clip_grad_norm: 1.0 # ignored, not in original paper
+device: "auto"
+validation: false
+epochs: 10
