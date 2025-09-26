@@ -14,7 +14,11 @@ Students will extend this scaffold into a working project that can:
 ## Assignment README
 
 ### Bengio paper summary
-The paper creates a distributed representation as a vector embedding of words based on its context, which allows different words that are semantically similar to be rated as similar each other. The model will then use these embeddings into a neural network to compute the probability of the next word (by maximizing log-likelihood of both outcomes). They use an evaluation called perplexity to measure the model, and their model with both the n-gram and NN performs significantly better than any known n-gram models at that time. Although their results help with reducing the curse of dimensionality, the computational power increased greatly as well. 
+The paper creates a distributed representation as a vector embedding of words based on its context, which allows different words that are semantically similar to be rated as similar each other. The model will then use these embeddings into a neural network to compute the probability of the next word (by maximizing log-likelihood of both outcomes). They use an evaluation called perplexity to measure the model, and their model with both the n-gram and NN performs significantly better than any known n-gram models at that time. Although their results help with reducing the curse of dimensionality, the computational power required increased greatly as well. 
+
+---
+## Notes
+These are notes I had while doing each section, a shortened list of commands are at the bottom. 
 
 ### Installing this repo
 Clone the repo and install in **editable mode**:
@@ -66,9 +70,17 @@ Evaluation:
 
 I didn't actually use a util.py
 
+---
+## Run commands
+- `python -m nplm.download --dataset brown`
+- `python -m nplm.preprocess --input_dir data/raw/brown --output_dir data/brown_jsonl --shard_size 5000 --lowercase`
+- `python -m nplm.build_word_tokenizer --jsonl_dir data/brown_jsonl/train --output_path artifacts/brown_word_vocab.json --lowercase`
+- `python -m nplm.train --config configs/tiny.yaml --data_dir data/brown_jsonl --save_dir runs/exp1`
+- `python -m nplm.eval --checkpoint runs/exp1/best.pt --data_dir data/brown_jsonl --out_json results/metrics.json`
+
 ### CPU/GPU usage notes
 I didn't use a GPU, just CPU on my macbook so a standard M3 Base model mac (yes sorry for my potato computer)
-CPU: 8-core (4 performance cores + 4 efficiency cores)
-Neural Engine: 16-core
-Memory Bandwidth: 100 GB/s
-Clock Speed: Up to 4.05 GHz
+- CPU: 8-core (4 performance cores + 4 efficiency cores)
+- Neural Engine: 16-core
+- Memory Bandwidth: 100 GB/s
+- Clock Speed: Up to 4.05 GHz
